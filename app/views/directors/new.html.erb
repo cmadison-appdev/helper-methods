@@ -1,14 +1,14 @@
-<h1>Edit movie</h1>
+<h1>New director</h1>
 
-<% @movie.errors.full_messages.each do |message| %>
+<% @director.errors.full_messages.each do |message| %>
   <p style="color: red;"><%= message %></p>
 <% end %>
 
-<%= form_with(model: @movie) do |form| %>
- 
+<%= form_with(model: @director) do |form|%>
+  
   <div>
-    <%= form.label :title %>
-    <%= form.text_field :title %> 
+    <%= form.label :name %>
+    <%= form.text_field :name%> 
   </div>
 
   <div>
@@ -19,5 +19,3 @@
   <%= form.button %>
 
 <% end %>
-
-
